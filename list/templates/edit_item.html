@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+  <form method="POST">
+{% csrf_token %}
+<div class="col-10">
+
+{# Include the hidden fields #}
+{% for hidden in form.hidden_fields %}
+{{ hidden }}
+{% endfor %}
+{# Include the visible fields #}
+{% block form.visible_fields %}
+
+
+<div class="fieldWrapper">
+    <label for="{{ form.name_new.id_for_label }}">आपका सही नाम :</label>
+    {{ form.name_new }}
+</div>
+<div class="fieldWrapper">
+    <label for="{{ form.relation_name_english.id_for_label }}">आपके पिता/पति का नाम :</label>
+    {{ form.relation_name_english }}
+</div>
+<div class="fieldWrapper">
+    <label for="{{ form.address_english.id_for_label }}">आपका पूरा पता :</label>
+    {{ form.address_english }}
+</div>
+<div class="fieldWrapper">
+    <label for="{{ form.MOBILE.id_for_label }}">आपका मोबाइल नंबर :</label>
+    {{ form.MOBILE }}
+</div>
+
+{%  endblock %}
+
+<button type="submit" name="button">Save</button>
+</div>
+
+
+  </form><br>
+  <h2>आगरा खण्ड स्नातक निर्वाचन क्षेत्र से भाजपा प्रत्याशी <b>डॉ मानवेन्द्र प्रताप सिंह</b> को प्रथम 1 वरीयता देकर भारी मतों से विजयी बनाए। </h2>
+
+</div>
+
+{%  endblock %}

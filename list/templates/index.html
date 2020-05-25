@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block body %}
+<center><h3>Currently Showing Data for {{ header }}</h3><center>
+<table class="table table-striped w-auto " >
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col" >Center</th>
+      <th scope="col">Booth</th>
+      <th scope="col">Section</th>
+
+      <th scope="col">Name (Hindi)</th>
+      <th scope="col">Name (English)</th>
+      <th scope="col">Relation_Name (Hindi)</th>
+      <th scope="col">Relation_Name (English)</th>
+      <th scope="col">Relation Type</th>
+      <th scope="col">Address (Hindi)</th>
+      <th scope="col">Address (English)</th>
+      <th scope="col">Tehsil</th>
+      <th scope="col">Gender</th>
+      <th scope="col">dob</th>
+      <th scope="col">Correction</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in items %}
+    <tr>
+      <th scope="row">  </th>
+      <!-- <th scope="row">{{ item.pk }}</th> -->
+      <td class="hinditext">{{ item.center }}</td>
+      <td>{{ item.Booth }}</td>
+      <td>{{ item.section }}</td>
+
+      <td class="hinditext">{{ item.name_hindi|safe }}</td>
+      <td >{{ item.name_english}}</td>
+      <td class="hinditext">{{ item.relation_name_hindi }}</td>
+      <td>{{ item.relation_name_english }}</td>
+      <td class="hinditext">{{ item.relation_type }}</td>
+      <td class="hinditext">{{ item.address_hindi }}</td>
+      <td>{{ item.address_english }}</td>
+      <td>{{ item.TEHSIL }}</td>
+      <td class="hinditext">{{ item.gender }}</td>
+      <td>{{ item.dob|truncatechars:12}}</td>
+      <!-- <td>{{ item.MOBILE }}</td> -->
+
+    {% if "city" in item.TEHSIL or "zila" in item.TEHSIL %}
+      <td><a href="{% url 'edit_Aligarh' item.pk %}" class="btn btn-primary" role="button">Edit</a></td>
+    <!-- {% elif "" in item.TEHSIL or "" in item.TEHSIL %}
+      <td><a href="{% url 'edit_Aligarh' item.pk %}" class="btn btn-primary" role="button">Edit</a></td>
+    {% elif "" in item.TEHSIL or "" in item.TEHSIL %}
+      <td><a href="{% url 'edit_Aligarh' item.pk %}" class="btn btn-primary" role="button">Edit</a></td>
+    {% elif "" in item.TEHSIL or "" in item.TEHSIL %}
+      <td><a href="{% url 'edit_Aligarh' item.pk %}" class="btn btn-primary" role="button">Edit</a></td>
+    {% elif "" in item.TEHSIL or "" in item.TEHSIL %}
+      <td><a href="{% url 'edit_Aligarh' item.pk %}" class="btn btn-primary" role="button">Edit</a></td>
+    {% elif "" in item.TEHSIL or "" in item.TEHSIL %}
+      <td><a href="{% url 'edit_Aligarh' item.pk %}" class="btn btn-primary" role="button">Edit</a></td>
+    {% elif "" in item.TEHSIL or "" in item.TEHSIL %}
+      <td><a href="{% url 'edit_Aligarh' item.pk %}" class="btn btn-primary" role="button">Edit</a></td>
+    {% elif "" in item.TEHSIL or "" in item.TEHSIL %}
+      <td><a href="{% url 'edit_Aligarh' item.pk %}" class="btn btn-primary" role="button">Edit</a></td>
+    {% elif "" in item.TEHSIL or "" in item.TEHSIL %}
+      <td><a href="{% url 'edit_Aligarh' item.pk %}" class="btn btn-primary" role="button">Edit</a></td>
+    {% elif "" in item.TEHSIL or "" in item.TEHSIL %}
+      <td><a href="{% url 'edit_Aligarh' item.pk %}" class="btn btn-primary" role="button">Edit</a></td>
+    {% elif "" in item.TEHSIL or "" in item.TEHSIL %}
+      <td><a href="{% url 'edit_Aligarh' item.pk %}" class="btn btn-primary" role="button">Edit</a></td>
+    {% elif "" in item.TEHSIL or "" in item.TEHSIL %}
+      <td><a href="{% url 'edit_Aligarh' item.pk %}" class="btn btn-primary" role="button">Edit</a></td>
+    {% elif "" in item.TEHSIL or "" in item.TEHSIL %}
+      <td><a href="{% url 'edit_Aligarh' item.pk %}" class="btn btn-primary" role="button">Edit</a></td> -->
+
+
+{% endif %}
+
+        </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+
+
+{%  endblock %}

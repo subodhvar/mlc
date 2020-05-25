@@ -1,0 +1,313 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="float-right">
+    <div class="card text-white bg-dark mb-3" style="width: 19rem;">
+    <img src="static/images/img1.jpg" alt="Not Avliable" class="rounded float-right"  width="300" height="300">
+    <div class="card-header" align="center">डॉ मानवेन्द्र प्रताप सिंह<br> एम.ए.(अंग्रेज़ी एवं इतिहास) बी.एड. पी.एच.डी.</div>
+      <p class="card-text">स्नातक एम. एल. सी. प्रत्याशी. आगरा खंड ब्रज प्रांत उपाध्यछ- भाजपा ब्रज क्षेत्र</p>
+    </div>
+
+    <!-- <table class="table table-dark" style="width:22%" align="right">
+      <thead>
+        <tr>
+          <th scope="col"> -->
+    <div class="card text-white bg-secondary mb-3" style="width: 19rem;">
+    <div class="card-header" align="center">Notifications</div>
+      <p class="card-text">
+    <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner ">
+        <div class="carousel-item active">
+          <p class="card-text">Notifications will show here</p>
+        </div>
+        <div class="carousel-item">
+          <p class="card-text">Type your messsage here.</p>
+        </div>
+        <div class="carousel-item">
+          <p class="card-text">we will diplay it in cyclic order</p>
+        </div>
+      </div>
+      <br><br>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+  </p>
+    <!-- </th></tr></thead></table> -->
+
+</div>
+
+  </div>
+
+<h1>Select City and Tehsil</h1>
+
+
+<br>
+
+<div class="row">
+  <div class="col-4.2 ">
+    <div class="list-group" id="list-tab" role="tablist">
+      <a class="list-group-item list-group-item-action font-weight-bold" id="list-Agra-list" data-toggle="list" href="#list-Agra" role="tab" aria-controls="Agra">AGRA</a>
+      <a class="list-group-item list-group-item-action font-weight-bold" id="list-Aligarh-list" data-toggle="list" href="#list-Aligarh" role="tab" aria-controls="Aligarh">ALIGARH</a>
+      <a class="list-group-item list-group-item-action font-weight-bold" id="list-Auraiya-list" data-toggle="list" href="#list-Auraiya" role="tab" aria-controls="Auraiya">AURAIYA</a>
+      <a class="list-group-item list-group-item-action font-weight-bold" id="list-Etah-list" data-toggle="list" href="#list-Etah" role="tab" aria-controls="Etah">ETAH</a>
+      <a class="list-group-item list-group-item-action font-weight-bold" id="list-Etawah-list" data-toggle="list" href="#list-Etawah" role="tab" aria-controls="Etawah">ETAWAH</a>
+      <a class="list-group-item list-group-item-action font-weight-bold" id="list-Farrukhabad-list" data-toggle="list" href="#list-Farrukhabad" role="tab" aria-controls="Farrukhabad">FARRUKHABAD</a>
+      <a class="list-group-item list-group-item-action font-weight-bold" id="list-Hathras-list" data-toggle="list" href="#list-Hathras" role="tab" aria-controls="Hathras">HATHRAS</a>
+      <a class="list-group-item list-group-item-action font-weight-bold" id="list-Firozabad-list" data-toggle="list" href="#list-Firozabad" role="tab" aria-controls="Firozabad">FIROZABAD</a>
+      <a class="list-group-item list-group-item-action font-weight-bold" id="list-Kasganj-list" data-toggle="list" href="#list-Kasganj" role="tab" aria-controls="Kasganj">KASGANJ</a>
+      <a class="list-group-item list-group-item-action font-weight-bold" id="list-Kannauj-list" data-toggle="list" href="#list-Kannauj" role="tab" aria-controls="Kannauj">KANNAUJ</a>
+      <a class="list-group-item list-group-item-action font-weight-bold" id="list-Mainpuri-list" data-toggle="list" href="#list-Mainpuri" role="tab" aria-controls="Mainpuri">MAINPURI</a>
+      <a class="list-group-item list-group-item-action font-weight-bold" id="list-Mathura-list" data-toggle="list" href="#list-Mathura" role="tab" aria-controls="Mathura">MATHURA</a>
+
+  </div>
+  </div>
+
+
+
+  <div class="col-5">
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="list-Agra" role="tabpanel" aria-labelledby="list-Agra-list">
+   <form class="form-inline my-2 my-lg-0" action="{% url 'Agra' %}">
+
+<div class="btn-group">
+<select name="tehsil" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <option value="AGRA" class="dropdown-item">AGRA</option>
+    <option value="FATEHABAD" class="dropdown-item">FATEHABAD</option>
+    <option value="KIRAWALI" class="dropdown-item">KIRAWALI</option>
+    <option value="KHERAGARH" class="dropdown-item">KHERAGARH</option>
+    <option value="BAH" class="dropdown-item">BAH</option>
+    <option value="ETMADPUR" class="dropdown-item">ETMADPUR</option>
+  </select>
+  </div>
+&nbsp  <input class="form-control mr-sm-2" type="text" placeholder="Search Name" name="search" value="{{request.GET.search}} ">
+  <button class="btn btn-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+</form>
+</div>
+
+
+
+<div class="tab-pane fade" id="list-Aligarh" role="tabpanel" aria-labelledby="list-Aligarh-list">
+      <form class="form-inline my-2 my-lg-0" action="{% url 'Aligarh' %}">
+        <div class="btn-group">
+        <select name="tehsil" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <option value="city" class="dropdown-item">CITY (SHAHAR)</option>
+            <option value="zila" class="dropdown-item">ZILA (DEHATI AREA)</option>
+
+          </select>
+          </div>
+          &nbsp<input class="form-control mr-sm-2" type="text" placeholder="Search Name" name="search" value="{{request.GET.search}}">
+          <button class="btn btn-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+
+        </form>
+        </div>
+
+      <div class="tab-pane fade" id="list-Auraiya" role="tabpanel" aria-labelledby="list-Auraiya-list">
+        <form class="form-inline my-2 my-lg-0" action="{% url 'Auraiya' %}">
+          <div class="btn-group">
+          <select name="tehsil" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <option value="AURAIYA" class="dropdown-item">AURAIYA</option>
+              <option value="BIDHUNA" class="dropdown-item">BIDHUNA</option>
+              <option value="AJITMAL" class="dropdown-item">AJITMAL</option>
+            </select>
+            </div>
+            &nbsp<input class="form-control mr-sm-2" type="text" placeholder="Search Name" name="search" value="{{request.GET.search}}">
+            <button class="btn btn-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+
+          </form>
+
+      </div>
+
+      <div class="tab-pane fade" id="list-Etah" role="tabpanel" aria-labelledby="list-Etah-list">
+        <form class="form-inline my-2 my-lg-0" action="{% url 'Etah' %}">
+          <div class="btn-group">
+          <select name="tehsil" type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <option value="ALIGANJ" class="dropdown-item">ALIGANJ</option>
+              <option value="ETAH" class="dropdown-item">ETAH</option>
+              <option value="JALESAR" class="dropdown-item">JALESAR</option>
+
+            </select>
+            </div>
+            &nbsp<input class="form-control mr-sm-2" type="text" placeholder="Search Name" name="search" value="{{request.GET.search}}">
+            <button class="btn btn-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+
+          </form>
+
+      </div>
+
+
+      <div class="tab-pane fade" id="list-Farrukhabad" role="tabpanel" aria-labelledby="list-Farrukhabad-list">
+        <form class="form-inline my-2 my-lg-0" action="{% url 'Farrukhabad' %}">
+          <div class="btn-group">
+          <select name="tehsil" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <option value="SADAR" class="dropdown-item">SADAR</option>
+              <option value="AMRITPUR" class="dropdown-item">AMRITPUR</option>
+              <option value="KAYAMGANJ" class="dropdown-item">KAYAMGANJ</option>
+
+            </select>
+            </div>
+            &nbsp<input class="form-control mr-sm-2" type="text" placeholder="Search Name" name="search" value="{{request.GET.search}}">
+            <button class="btn btn-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+
+          </form>
+
+       </div>
+
+      <div class="tab-pane fade" id="list-Hathras" role="tabpanel" aria-labelledby="list-Hathras-list">
+        <form class="form-inline my-2 my-lg-0" action="{% url 'Hathras' %}">
+          <div class="btn-group">
+          <select name="tehsil" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <option value="HATHRAS" class="dropdown-item">HATHRAS</option>
+              <option value="SADABAD" class="dropdown-item">SADABAD</option>
+              <option value="SASNI" class="dropdown-item">SASNI</option>
+              <option value="SIKANDRAO" class="dropdown-item">SIKANDRAO</option>
+
+            </select>
+            </div>
+            &nbsp<input class="form-control mr-sm-2" type="text" placeholder="Search Name" name="search" value="{{request.GET.search}}">
+            <button class="btn btn-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+
+          </form>
+
+
+      </div>
+      <div class="tab-pane fade" id="list-Firozabad" role="tabpanel" aria-labelledby="list-Firozabad-list">
+        <form class="form-inline my-2 my-lg-0" action="{% url 'Firozabad' %}">
+          <div class="btn-group">
+          <select name="tehsil" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <option value="FIROZABAD" class="dropdown-item">FIROZABAD</option>
+              <option value="SHIKOHABAD" class="dropdown-item">SHIKOHABAD</option
+              <option value="TUNDLA" class="dropdown-item">TUNDLA</option>
+              <option value="JASRANA" class="dropdown-item">JASRANA</option>
+              <option value="SIRSAGANJ" class="dropdown-item">SIRSAGANJ</option>
+
+            </select>
+            </div>
+            &nbsp<input class="form-control mr-sm-2" type="text" placeholder="Search Name" name="search" value="{{request.GET.search}}">
+            <button class="btn btn-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+
+          </form>
+
+
+       </div>
+      <div class="tab-pane fade" id="list-Kasganj" role="tabpanel" aria-labelledby="list-Kasganj-list">
+        <form class="form-inline my-2 my-lg-0" action="{% url 'Kasganj' %}">
+          <div class="btn-group">
+          <select name="tehsil" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <option value="KASGANJ" class="dropdown-item">KASGANJ</option>
+              <option value="SAHABAR" class="dropdown-item">SAHABAR</option>
+              <option value="PATIYALI" class="dropdown-item">PATIYALI</option>
+
+            </select>
+            </div>
+            &nbsp<input class="form-control mr-sm-2" type="text" placeholder="Search Name" name="search" value="{{request.GET.search}}">
+            <button class="btn btn-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+
+          </form>
+
+
+        </div>
+      <div class="tab-pane fade" id="list-Kannauj" role="tabpanel" aria-labelledby="list-Kannauj-list">
+        <form class="form-inline my-2 my-lg-0" action="{% url 'Kannauj' %}">
+          <div class="btn-group">
+          <select name="tehsil" type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <option value="CHHIBRAMAU" class="dropdown-item">CHHIBRAMAU</option>
+              <option value="KANNOJ" class="dropdown-item">KANNOJ</option>
+              <option value="TIRWA" class="dropdown-item">TIRWA</option>
+
+            </select>
+            </div>
+            &nbsp<input class="form-control mr-sm-2" type="text" placeholder="Search Name" name="search" value="{{request.GET.search}}">
+            <button class="btn btn-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+
+          </form>
+
+
+       </div>
+      <div class="tab-pane fade" id="list-Mainpuri" role="tabpanel" aria-labelledby="list-Mainpuri-list">
+        <form class="form-inline my-2 my-lg-0" action="{% url 'Mainpuri' %}">
+          <div class="btn-group">
+          <select name="tehsil" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <option value="KARHAL" class="dropdown-item">KARHAL</option>
+              <option value="KISHNI" class="dropdown-item">KISHNI</option>
+              <option value="KURAWALI" class="dropdown-item">KURAWALI</option>
+              <option value="GHIROR" class="dropdown-item">GHIROR</option>
+              <option value="BHOGAON" class="dropdown-item">BHOGAON</option>
+              <option value="MAINPURI" class="dropdown-item">MAINPURI</option>
+
+            </select>
+            </div>
+            &nbsp<input class="form-control mr-sm-2" type="text" placeholder="Search Name" name="search" value="{{request.GET.search}}">
+            <button class="btn btn-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+
+          </form>
+
+
+      </div>
+
+
+
+
+      <div class="tab-pane fade" id="list-Mathura" role="tabpanel" aria-labelledby="list-Mathura-list">
+        <form class="form-inline my-2 my-lg-0" action="{% url 'Mathura' %}">
+          <div class="btn-group">
+          <select name="tehsil" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <option value="MATHURA" class="dropdown-item">MATHURA</option>
+              <option value="GOVARDHAN" class="dropdown-item">GOVARDHAN</option>
+              <option value="CHHATA" class="dropdown-item">CHHATA</option>
+              <option value="MANT" class="dropdown-item">MANT</option>
+              <option value="MAHAVAN" class="dropdown-item">MAHAVAN</option>
+
+            </select>
+            </div>
+            &nbsp<input class="form-control mr-sm-2" type="text" placeholder="Search Name" name="search" value="{{request.GET.search}}">
+            <button class="btn btn-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+
+          </form>
+        </div>
+
+
+        <div class="tab-pane fade" id="list-Etawah" role="tabpanel" aria-labelledby="list-Etawah-list">
+              <form class="form-inline my-2 my-lg-0" action="{% url 'Etawah' %}">
+                <div class="btn-group">
+                <select name="tehsil" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <option value="ETAWA" class="dropdown-item">ETAWA</option>
+                  <option value="BHARTANA" class="dropdown-item">BHARTANA</option>
+                  <option value="JASWANT NAGAR" class="dropdown-item">JASWANT NAGAR</option>
+                  <option value="SAIFAI" class="dropdown-item">SAIFAI</option>
+                  <option value="CHAKARNAGAR" class="dropdown-item">CHAKARNAGAR</option>
+                  <option value="TAKHA" class="dropdown-item">TAKHA</option
+                  </select>
+                  </div>
+                  &nbsp<input class="form-control mr-sm-2" type="text" placeholder="Search Name" name="search" value="{{request.GET.search}}">
+                  <button class="btn btn-success my-2 my-sm-0" type="submit" value="Search">Search</button>
+
+                </form>
+                </div>
+
+
+
+         <br><br>
+
+
+
+    </div>
+
+
+</div>
+
+
+  </div>
+
+
+{%  endblock %}
